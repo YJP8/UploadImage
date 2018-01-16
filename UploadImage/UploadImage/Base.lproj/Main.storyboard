@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zql-ZA-Atg">
+                                <rect key="frame" x="118" y="249" width="138" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="rkg-2X-EJ5"/>
+                                </constraints>
+                                <state key="normal" title="文件流形式上传头像"/>
+                                <connections>
+                                    <action selector="fileFlowUploadImageClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QTU-5G-tAR"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ons-cc-3LE">
+                                <rect key="frame" x="115" y="329" width="145" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="LDj-pT-Z3t"/>
+                                </constraints>
+                                <state key="normal" title="Base64形式上传头像"/>
+                                <connections>
+                                    <action selector="base64UploadImageClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LcI-iq-tLM"/>
+                                </connections>
+                            </button>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="user_image" translatesAutoresizingMaskIntoConstraints="NO" id="bvG-1d-ENz">
+                                <rect key="frame" x="143" y="60" width="89" height="89"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="89" id="Gx2-VH-vUO"/>
+                                    <constraint firstAttribute="height" constant="89" id="g8Z-sF-43p"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="XZQ-Zw-9WB" appends="YES" id="D7O-Zh-0Sl"/>
+                                </connections>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="注: 请先点击头像选择要上传的图片,再选择上传方式" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WsI-va-oUI">
+                                <rect key="frame" x="25" y="518" width="325" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="1AK-3x-OGl"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="bvG-1d-ENz" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="40" id="Afk-MN-2KP"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="WsI-va-oUI" secondAttribute="trailing" constant="25" id="CEF-rn-E12"/>
+                            <constraint firstItem="bvG-1d-ENz" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="KYe-gr-bE9"/>
+                            <constraint firstItem="WsI-va-oUI" firstAttribute="top" secondItem="Ons-cc-3LE" secondAttribute="bottom" constant="159" id="O0k-Ql-WoG"/>
+                            <constraint firstItem="Ons-cc-3LE" firstAttribute="top" secondItem="zql-ZA-Atg" secondAttribute="bottom" constant="50" id="cvk-ji-FgE"/>
+                            <constraint firstItem="zql-ZA-Atg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="oIu-q4-Xru"/>
+                            <constraint firstItem="WsI-va-oUI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="25" id="pGp-Bk-wg4"/>
+                            <constraint firstItem="Ons-cc-3LE" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="rOz-nN-DLi"/>
+                            <constraint firstItem="zql-ZA-Atg" firstAttribute="top" secondItem="bvG-1d-ENz" secondAttribute="bottom" constant="100" id="tkT-bJ-5IX"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="headPortrait" destination="bvG-1d-ENz" id="Ugg-R6-qG1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="XZQ-Zw-9WB">
+                    <connections>
+                        <action selector="chooseImage:" destination="BYZ-38-t0r" id="Mpb-nD-RXH"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="172" y="75.112443778110944"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="user_image" width="75" height="75"/>
+    </resources>
+</document>
